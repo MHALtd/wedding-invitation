@@ -14,7 +14,6 @@ simplyCountdown(".simply-countdown", {
 });
 
 // FIX OFFCANVAS
-const hamburger = document.querySelector(".navbar-toggler");
 const stickyTop = document.querySelector(".sticky-top");
 const offCanvas = document.querySelector(".offcanvas");
 
