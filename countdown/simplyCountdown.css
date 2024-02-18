@@ -37,7 +37,7 @@
 /* Tablet */
 @media (max-width: 768px) {
   .simply-countdown > .simply-section {
-    padding: 50px;
+    padding: 60px;
     margin: 5px;
   }
 }
@@ -45,7 +45,21 @@
 /* Mobile Phone */
 @media (max-width: 576px) {
   .simply-countdown > .simply-section {
-    padding: 30px;
+    padding: 45px;
     margin: 3px;
+  }
+}
+
+/* Mobile Phone M */
+@media (max-width: 400px) {
+  .simply-countdown > .simply-section {
+    padding: 35px;
+  }
+}
+
+/* Mobile Phone S*/
+@media (max-width: 350px) {
+  .simply-countdown > .simply-section {
+    padding: 33px;
   }
 }
