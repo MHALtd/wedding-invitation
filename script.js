@@ -25,8 +25,14 @@ offCanvas.addEventListener("hidden.bs.offcanvas", function () {
   stickyTop.style.overflow = "hidden";
 });
 
-// DISABLE SCROLL
+// PAGE SCRIPT VARIABLE
 const rootElement = document.querySelector(":root");
+const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+const bgm = document.querySelector("#bgm");
+const audioIcon = document.querySelector(".audio-icon-wrapper i");
+let isPlaying = false;
+
+// DISABLE SCROLL
 function disableScroll() {
   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -41,9 +47,34 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {};
   rootElement.style.scrollBehavior = "smooth";
-  localStorage.setItem("opened", "true");
+  // localStorage.setItem("opened", "true");
+  playAudio();
 }
 
-if (!localStorage.getItem("opened")) {
-  disableScroll();
+// if (!localStorage.getItem("opened")) {
+//   disableScroll();
+// }
+
+disableScroll();
+
+// BGM
+function playAudio() {
+  bgm.volume = 0.2;
+  audioIconWrapper.style.display = "flex";
+  bgm.play();
+  isPlaying = true;
 }
+
+audioIconWrapper.onclick = function () {
+  if (isPlaying) {
+    bgm.pause();
+    audioIcon.classList.remove("bi-disc");
+    audioIcon.classList.add("bi-pause-circle");
+  } else {
+    bgm.play();
+    audioIcon.classList.add("bi-disc");
+    audioIcon.classList.remove("bi-pause-circle");
+  }
+
+  isPlaying = !isPlaying;
+};
