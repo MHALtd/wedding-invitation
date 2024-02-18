@@ -24,3 +24,23 @@ offCanvas.addEventListener("show.bs.offcanvas", function () {
 offCanvas.addEventListener("hidden.bs.offcanvas", function () {
   stickyTop.style.overflow = "hidden";
 });
+
+// DISABLE SCROLL
+const rootElement = document.querySelector(":root");
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+  window.onscroll = function () {
+    window.scrollTo(scrollTop, scrollLeft);
+  };
+
+  rootElement.style.scrollBehavior = "auto";
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
+  rootElement.style.scrollBehavior = "smooth";
+}
+
+disableScroll();
