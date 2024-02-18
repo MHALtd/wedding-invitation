@@ -83,7 +83,7 @@ body {
   background-size: cover;
   min-height: 100vh;
   margin-top: -6rem;
-  padding-top: 10rem;
+  padding-top: 8rem;
   padding-bottom: 5rem;
 }
 
@@ -109,7 +109,7 @@ body {
 }
 
 .home .couple {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .home .couple h3 {
@@ -126,7 +126,7 @@ body {
 .info {
   background-color: var(--bg);
   color: white;
-  padding-top: 10rem;
+  padding-top: 8rem;
   padding-bottom: 8rem;
 }
 
@@ -157,8 +157,8 @@ body {
 
 .story,
 .gallery {
-  padding-top: 10rem;
-  padding-bottom: 8rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .story span,
