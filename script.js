@@ -78,3 +78,15 @@ audioIconWrapper.onclick = function () {
 
   isPlaying = !isPlaying;
 };
+
+// INVITATION GUEST NAME
+const urlParams = new URLSearchParams(window.location.search);
+const guest = urlParams.get("g") || "Bapak/Ibu/Saudara/i";
+const prons = urlParams.get("p");
+
+const guestContainer = document.querySelector(".hero h4 span");
+guestContainer.innerText = `${prons} ${guest}`;
+
+if (!prons) {
+  guestContainer.innerText = `${guest}`;
+}
