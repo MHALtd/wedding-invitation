@@ -14,16 +14,16 @@ simplyCountdown(".simply-countdown", {
 });
 
 // FIX OFFCANVAS
-const stickyTop = document.querySelector(".sticky-top");
-const offCanvas = document.querySelector(".offcanvas");
+// const stickyTop = document.querySelector(".sticky-top");
+// const offCanvas = document.querySelector(".offcanvas");
 
-offCanvas.addEventListener("show.bs.offcanvas", function () {
-  stickyTop.style.overflow = "visible";
-});
+// offCanvas.addEventListener("show.bs.offcanvas", function () {
+//   stickyTop.style.overflow = "visible";
+// });
 
-offCanvas.addEventListener("hidden.bs.offcanvas", function () {
-  stickyTop.style.overflow = "hidden";
-});
+// offCanvas.addEventListener("hidden.bs.offcanvas", function () {
+//   stickyTop.style.overflow = "hidden";
+// });
 
 // PAGE SCRIPT VARIABLE
 const rootElement = document.querySelector(":root");
